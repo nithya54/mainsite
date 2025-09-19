@@ -2,12 +2,12 @@
   "redirects": [
     {
       "source": "/app1",
-      "destination": "https://test-six-kohl-27.vercel.app/",
+      "destination": "https://myvercelwebsite-dusky.vercel.app",
       "permanent": false
     },
     {
       "source": "/app2", 
-      "destination": "https://your-second-app.vercel.app",
+      "destination": "https://taskapp-sooty.vercel.app/",
       "permanent": false
     }
   ]
