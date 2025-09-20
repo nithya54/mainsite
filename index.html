@@ -3,249 +3,144 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio Hub</title>
+    <title>My Main Site</title>
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-            line-height: 1.6;
-            color: #333;
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            min-height: 100vh;
-        }
-
-        .container {
-            max-width: 1200px;
+            max-width: 800px;
             margin: 0 auto;
             padding: 2rem;
+            background: #f5f5f5;
         }
-
-        header {
-            text-align: center;
-            margin-bottom: 4rem;
-            color: white;
+        
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
         }
-
+        
         h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
         }
-
-        .subtitle {
-            font-size: 1.2rem;
-            opacity: 0.9;
-        }
-
+        
         .apps-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-            margin-bottom: 3rem;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            margin: 2rem 0;
         }
-
+        
         .app-card {
-            background: rgba(255, 255, 255, 0.95);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 2rem;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+            border: 2px solid #e1e1e1;
+            border-radius: 8px;
+            padding: 1.5rem;
+            text-align: center;
             transition: all 0.3s ease;
-            border: 1px solid rgba(255, 255, 255, 0.2);
         }
-
+        
         .app-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border-color: #007acc;
+            transform: translateY(-5px);
         }
-
-        .app-icon {
-            width: 60px;
-            height: 60px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 12px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-bottom: 1.5rem;
-            font-size: 1.5rem;
-            color: white;
-        }
-
-        .app-title {
-            font-size: 1.5rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            color: #333;
-        }
-
-        .app-description {
-            color: #666;
-            margin-bottom: 1.5rem;
-            line-height: 1.5;
-        }
-
+        
         .app-link {
             display: inline-block;
-            background: linear-gradient(45deg, #667eea, #764ba2);
+            background: #007acc;
             color: white;
             padding: 0.8rem 1.5rem;
             text-decoration: none;
-            border-radius: 8px;
-            font-weight: 500;
-            transition: all 0.3s ease;
+            border-radius: 5px;
+            margin-top: 1rem;
+            transition: background 0.3s ease;
         }
-
+        
         .app-link:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+            background: #005a9e;
         }
-
-        .quick-links {
-            background: rgba(255, 255, 255, 0.1);
-            backdrop-filter: blur(10px);
-            border-radius: 15px;
-            padding: 2rem;
-            text-align: center;
-            border: 1px solid rgba(255, 255, 255, 0.2);
+        
+        .status {
+            margin: 2rem 0;
+            padding: 1rem;
+            background: #e8f5e8;
+            border-left: 4px solid #28a745;
+            border-radius: 4px;
         }
-
-        .quick-links h3 {
-            color: white;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+        
+        .test-links {
+            background: #f8f9fa;
+            padding: 1rem;
+            border-radius: 5px;
+            margin: 1rem 0;
         }
-
-        .links-row {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            flex-wrap: wrap;
-        }
-
-        .quick-link {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border: 2px solid rgba(255, 255, 255, 0.3);
-            border-radius: 25px;
-            transition: all 0.3s ease;
-            backdrop-filter: blur(5px);
-        }
-
-        .quick-link:hover {
-            background: rgba(255, 255, 255, 0.2);
-            border-color: rgba(255, 255, 255, 0.8);
-        }
-
-        @media (max-width: 768px) {
-            .container {
-                padding: 1rem;
-            }
-            
-            h1 {
-                font-size: 2.5rem;
-            }
-            
-            .apps-grid {
-                grid-template-columns: 1fr;
-            }
+        
+        .test-links a {
+            display: block;
+            margin: 0.5rem 0;
+            color: #007acc;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <header>
-            <h1>Welcome to My Digital Space</h1>
-            <p class="subtitle">Explore my projects, blog, and more</p>
-        </header>
-
+        <h1>🏠 My Main Site Hub</h1>
+        
+        <div class="status">
+            <strong>✅ Routing Status:</strong> Main site is running. Sub-apps accessible via rewrites.
+        </div>
+        
         <div class="apps-grid">
             <div class="app-card">
-                <div class="app-icon">🏠</div>
-                <h3 class="app-title">Main Portfolio</h3>
-                <p class="app-description">My primary portfolio showcasing web development projects, skills, and experience.</p>
-                <a href="/portfolio" class="app-link">View Portfolio</a>
+                <h3>📱 My Website</h3>
+                <p>My personal portfolio and projects showcase</p>
+                <a href="/app1" class="app-link">Visit App 1</a>
             </div>
-
+            
             <div class="app-card">
-                <div class="app-icon">📝</div>
-                <h3 class="app-title">Blog</h3>
-                <p class="app-description">Technical articles, tutorials, and thoughts on web development and technology.</p>
-                <a href="/blog" class="app-link">Read Blog</a>
-            </div>
-
-            <div class="app-card">
-                <div class="app-icon">🛍️</div>
-                <h3 class="app-title">E-commerce Demo</h3>
-                <p class="app-description">A full-featured online store built with modern web technologies.</p>
-                <a href="/shop" class="app-link">Visit Store</a>
-            </div>
-
-            <div class="app-card">
-                <div class="app-icon">📊</div>
-                <h3 class="app-title">Analytics Dashboard</h3>
-                <p class="app-description">Real-time data visualization and analytics platform demo.</p>
-                <a href="/analytics" class="app-link">View Dashboard</a>
-            </div>
-
-            <div class="app-card">
-                <div class="app-icon">🎨</div>
-                <h3 class="app-title">Design System</h3>
-                <p class="app-description">UI components library and design tokens documentation.</p>
-                <a href="/design" class="app-link">Explore Design</a>
-            </div>
-
-            <div class="app-card">
-                <div class="app-icon">📚</div>
-                <h3 class="app-title">Documentation</h3>
-                <p class="app-description">API documentation and technical guides for my projects.</p>
-                <a href="/docs" class="app-link">Read Docs</a>
+                <h3>✅ Task Master</h3>
+                <p>Task management and productivity application</p>
+                <a href="/app2" class="app-link">Visit App 2</a>
             </div>
         </div>
-
-        <div class="quick-links">
-            <h3>Quick Access</h3>
-            <div class="links-row">
-                <a href="/portfolio/projects" class="quick-link">Projects</a>
-                <a href="/blog/latest" class="quick-link">Latest Posts</a>
-                <a href="/portfolio/contact" class="quick-link">Contact</a>
-                <a href="/portfolio/resume" class="quick-link">Resume</a>
-            </div>
+        
+        <div class="test-links">
+            <h4>🧪 Test Links:</h4>
+            <a href="/" target="_blank">Main Site (Current)</a>
+            <a href="/app1" target="_blank">App 1 - My Website</a>
+            <a href="/app2" target="_blank">App 2 - Task Master</a>
+            <a href="https://myvercelwebsite-dusky.vercel.app" target="_blank">Direct App 1 Link</a>
+            <a href="https://taskapp-sooty.vercel.app" target="_blank">Direct App 2 Link</a>
+        </div>
+        
+        <div style="margin-top: 2rem; text-align: center; color: #666; font-size: 0.9rem;">
+            <p>🔧 Powered by Vercel Rewrites</p>
         </div>
     </div>
 
     <script>
-        // Add subtle animations on load
-        document.addEventListener('DOMContentLoaded', function() {
-            const cards = document.querySelectorAll('.app-card');
+        // Test connectivity to sub-apps
+        async function testApps() {
+            const apps = [
+                { name: 'App 1', url: '/app1' },
+                { name: 'App 2', url: '/app2' }
+            ];
             
-            cards.forEach((card, index) => {
-                setTimeout(() => {
-                    card.style.opacity = '0';
-                    card.style.transform = 'translateY(30px)';
-                    card.style.transition = 'all 0.6s ease';
-                    
-                    setTimeout(() => {
-                        card.style.opacity = '1';
-                        card.style.transform = 'translateY(0)';
-                    }, 100);
-                }, index * 100);
-            });
-        });
-
-        // Add click tracking (optional)
-        document.querySelectorAll('.app-link').forEach(link => {
-            link.addEventListener('click', function(e) {
-                console.log('Navigating to:', this.href);
-                // You can add analytics tracking here
-            });
-        });
+            console.log('Testing app connectivity...');
+            
+            for (const app of apps) {
+                try {
+                    const response = await fetch(app.url, { method: 'HEAD' });
+                    console.log(`${app.name}: ${response.status === 200 ? '✅ Connected' : '❌ Error'}`);
+                } catch (error) {
+                    console.log(`${app.name}: ❌ Failed - ${error.message}`);
+                }
+            }
+        }
+        
+        // Run test on page load
+        setTimeout(testApps, 1000);
     </script>
 </body>
 </html>

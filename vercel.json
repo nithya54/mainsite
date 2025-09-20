@@ -5,28 +5,21 @@
       "destination": "https://myvercelwebsite-dusky.vercel.app"
     },
     {
-      "source": "/app1/:path*",
-      "destination": "https://myvercelwebsite-dusky.vercel.app/:path*"
+      "source": "/app1/(.*)",
+      "destination": "https://myvercelwebsite-dusky.vercel.app/$1"
     },
     {
       "source": "/app2",
       "destination": "https://taskapp-sooty.vercel.app"
     },
     {
-      "source": "/app2/:path*",
-      "destination": "https://taskapp-sooty.vercel.app/:path*"
+      "source": "/app2/(.*)",
+      "destination": "https://taskapp-sooty.vercel.app/$1"
     }
   ],
-  "redirects": [
-    {
-      "source": "/website",
-      "destination": "/app1",
-      "permanent": false
-    },
-    {
-      "source": "/tasks",
-      "destination": "/app2", 
-      "permanent": false
+  "functions": {
+    "pages/api/edge/route.js": {
+      "runtime": "edge"
     }
-  ]
+  }
 }
