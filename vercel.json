@@ -1,13 +1,31 @@
 {
-  "redirects": [
+  "rewrites": [
     {
       "source": "/app1",
-      "destination": "https://myvercelwebsite-dusky.vercel.app",
+      "destination": "https://myvercelwebsite-dusky.vercel.app"
+    },
+    {
+      "source": "/app1/:path*",
+      "destination": "https://myvercelwebsite-dusky.vercel.app/:path*"
+    },
+    {
+      "source": "/app2",
+      "destination": "https://taskapp-sooty.vercel.app"
+    },
+    {
+      "source": "/app2/:path*",
+      "destination": "https://taskapp-sooty.vercel.app/:path*"
+    }
+  ],
+  "redirects": [
+    {
+      "source": "/website",
+      "destination": "/app1",
       "permanent": false
     },
     {
-      "source": "/app2", 
-      "destination": "https://taskapp-sooty.vercel.app/",
+      "source": "/tasks",
+      "destination": "/app2", 
       "permanent": false
     }
   ]
