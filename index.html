@@ -214,6 +214,76 @@
                 grid-template-columns: 1fr;
             }
         }
+        .apps-section {
+    margin: 3rem 0;
+    padding: 3rem 0;
+}
+
+.apps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.app-card {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 15px;
+    padding: 2rem;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.app-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.app-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 1.5rem;
+    color: white;
+}
+
+.app-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.app-description {
+    color: #666;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.app-link {
+    display: inline-block;
+    background: linear-gradient(45deg, #667eea, #764ba2);
+    color: white;
+    padding: 0.8rem 1.5rem;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+.app-link:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
     </style>
 </head>
 <body>
@@ -227,7 +297,24 @@
             <h2>Building Digital Experiences</h2>
             <p>I'm a passionate developer who loves creating beautiful, functional web applications. With expertise in modern web technologies, I bring ideas to life through clean code and thoughtful design.</p>
         </div>
+<div class="apps-section">
+    <h2 style="text-align: center; color: white; margin-bottom: 2rem; font-size: 2.5rem;">🚀 My Applications</h2>
+    <div class="apps-grid">
+        <div class="app-card">
+            <div class="app-icon">🌐</div>
+            <h3 class="app-title">Professional Website</h3>
+            <p class="app-description">My professional portfolio showcasing services, projects, and business information.</p>
+            <a href="/vercelsite" class="app-link">Visit Website →</a>
+        </div>
 
+        <div class="app-card">
+            <div class="app-icon">✅</div>
+            <h3 class="app-title">Task Master</h3>
+            <p class="app-description">Productivity dashboard with task management, team collaboration, and progress tracking.</p>
+            <a href="/taskapp" class="app-link">Open Tasks →</a>
+        </div>
+    </div>
+</div>
         <div class="skills-grid">
             <div class="skill-card">
                 <div class="skill-icon">💻</div>

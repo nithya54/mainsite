@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    {
+      "source": "/vercelsite",
+      "destination": "https://vercelsite-dusky.vercel.app"
+    },
+    {
+      "source": "/vercelsite/:path*",
+      "destination": "https://vercelsite-dusky.vercel.app/:path*"
+    },
+    {
+      "source": "/taskapp",
+      "destination": "https://taskapp-taupe.vercel.app"
+    },
+    {
+      "source": "/taskapp/:path*",
+      "destination": "https://taskapp-taupe.vercel.app/:path*"
+    }
+  ]
+}
