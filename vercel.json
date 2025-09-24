@@ -20,15 +20,8 @@
     {
       "source": "/dashboard/:path*",
       "destination": "https://taskapp-taupe.vercel.app/:path*"
-    },
-    {
-      "source": "/api/portfolio/:path*",
-      "destination": "https://vercelsite-dusky.vercel.app/api/:path*"
-    },
-    {
-      "source": "/api/tasks/:path*", 
-      "destination": "https://taskapp-taupe.vercel.app/api/:path*"
     }
+
   ],
 
   "redirects": [
@@ -96,12 +89,7 @@
     }
   ],
 
-  "functions": {
-    "pages/api/*.js": {
-      "memory": 512,
-      "maxDuration": 10
-    }
-  },
+ 
 
   "cleanUrls": true,
   "trailingSlash": false
