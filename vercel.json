@@ -3,7 +3,6 @@
 {
   "version": 2,
   "name": "my-production-site",
-  "regions": ["iad1", "sfo1", "lhr1"],
   
   "rewrites": [
     {
