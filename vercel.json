@@ -1,20 +1,109 @@
+
+
 {
+  "version": 2,
+  "name": "my-production-site",
+  "regions": ["iad1", "sfo1", "lhr1"],
+  
   "rewrites": [
     {
-      "source": "/vercelsite",
-      "destination": "https://vercelsite-dusky.vercel.app"
+      "source": "/portfolio",
+      "destination": "https://vercelsite-dusky.vercel.app/index.html"
     },
     {
-      "source": "/vercelsite/:path*",
+      "source": "/portfolio/:path*",
       "destination": "https://vercelsite-dusky.vercel.app/:path*"
     },
     {
-      "source": "/taskapp",
-      "destination": "https://taskapp-taupe.vercel.app"
+      "source": "/dashboard", 
+      "destination": "https://taskapp-taupe.vercel.app/index.html"
+    },
+    {
+      "source": "/dashboard/:path*",
+      "destination": "https://taskapp-taupe.vercel.app/:path*"
+    },
+    {
+      "source": "/api/portfolio/:path*",
+      "destination": "https://vercelsite-dusky.vercel.app/api/:path*"
+    },
+    {
+      "source": "/api/tasks/:path*", 
+      "destination": "https://taskapp-taupe.vercel.app/api/:path*"
+    }
+  ],
+
+  "redirects": [
+    {
+      "source": "/www.mainsite-beta.com/(.*)",
+      "destination": "https://mainsite-beta.com/$1",
+      "permanent": true
+    },
+    {
+      "source": "/vercelsite/:path*",
+      "destination": "/portfolio/:path*",
+      "permanent": true
     },
     {
       "source": "/taskapp/:path*",
-      "destination": "https://taskapp-taupe.vercel.app/:path*"
+      "destination": "/dashboard/:path*", 
+      "permanent": true
+    },
+    {
+      "source": "/old-portfolio",
+      "destination": "/portfolio",
+      "permanent": true
     }
-  ]
+  ],
+
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy", 
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "Strict-Transport-Security",
+          "value": "max-age=31536000; includeSubDomains"
+        }
+      ]
+    },
+    {
+      "source": "/static/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=31536000, immutable"
+        }
+      ]
+    },
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "s-maxage=60, stale-while-revalidate=300"
+        }
+      ]
+    }
+  ],
+
+  "functions": {
+    "pages/api/*.js": {
+      "memory": 512,
+      "maxDuration": 10
+    }
+  },
+
+  "cleanUrls": true,
+  "trailingSlash": false
 }
